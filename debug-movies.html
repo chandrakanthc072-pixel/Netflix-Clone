@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Debug Movies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <div class="bg-red-600 p-4 text-center">
+            <h1 class="text-2xl font-bold">🎬 Netflix Clone - All Movie Categories</h1>
+            <p class="text-sm mt-2">Debug: Showing all 8 categories with movies</p>
+        </div>
+
+        <!-- Categories -->
+        <div class="px-4 md:px-8 py-8 space-y-8">
+            <!-- Trending Now -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">🔥 Trending Now</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎬</div>
+                            <p class="text-sm font-bold">Stranger Things</p>
+                            <p class="text-xs text-green-400">87% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎭</div>
+                            <p class="text-sm font-bold">The Crown</p>
+                            <p class="text-xs text-green-400">86% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">⚗️</div>
+                            <p class="text-sm font-bold">Breaking Bad</p>
+                            <p class="text-xs text-green-400">95% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">💰</div>
+                            <p class="text-sm font-bold">Money Heist</p>
+                            <p class="text-xs text-green-400">82% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎯</div>
+                            <p class="text-sm font-bold">The Witcher</p>
+                            <p class="text-xs text-green-400">82% Match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Netflix Originals -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">🎯 Netflix Originals</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-96 h-48 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎬</div>
+                            <p class="text-sm font-bold">Stranger Things</p>
+                            <p class="text-xs text-green-400">87% Match • 16+</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-96 h-48 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">👑</div>
+                            <p class="text-sm font-bold">The Crown</p>
+                            <p class="text-xs text-green-400">86% Match • 16+</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-96 h-48 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">♟️</div>
+                            <p class="text-sm font-bold">Queen's Gambit</p>
+                            <p class="text-xs text-green-400">85% Match • 13+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Rated -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">⭐ Top Rated</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">⚗️</div>
+                            <p class="text-sm font-bold">Breaking Bad</p>
+                            <p class="text-xs text-green-400">95% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-orange-600 to-orange-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🌟</div>
+                            <p class="text-sm font-bold">Dark</p>
+                            <p class="text-xs text-green-400">87% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎬</div>
+                            <p class="text-sm font-bold">Stranger Things</p>
+                            <p class="text-xs text-green-400">87% Match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Movies -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">💥 Action Movies</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎯</div>
+                            <p class="text-sm font-bold">The Witcher</p>
+                            <p class="text-xs text-green-400">82% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">💰</div>
+                            <p class="text-sm font-bold">Money Heist</p>
+                            <p class="text-xs text-green-400">82% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎮</div>
+                            <p class="text-sm font-bold">Squid Game</p>
+                            <p class="text-xs text-green-400">80% Match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comedy Movies -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">😂 Comedy Movies</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-pink-600 to-pink-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎭</div>
+                            <p class="text-sm font-bold">The Office</p>
+                            <p class="text-xs text-green-400">88% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">👨‍👩‍👧‍👦</div>
+                            <p class="text-sm font-bold">Modern Family</p>
+                            <p class="text-xs text-green-400">85% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🍔</div>
+                            <p class="text-sm font-bold">The Good Place</p>
+                            <p class="text-xs text-green-400">84% Match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horror Movies -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">👻 Horror Movies</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🎬</div>
+                            <p class="text-sm font-bold">Stranger Things</p>
+                            <p class="text-xs text-green-400">87% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🌑</div>
+                            <p class="text-sm font-bold">Dark</p>
+                            <p class="text-xs text-green-400">87% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🧟</div>
+                            <p class="text-sm font-bold">The Walking Dead</p>
+                            <p class="text-xs text-green-400">83% Match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Romance Movies -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">💕 Romance Movies</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-pink-600 to-pink-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">💑</div>
+                            <p class="text-sm font-bold">The Notebook</p>
+                            <p class="text-xs text-green-400">85% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">❤️</div>
+                            <p class="text-sm font-bold">La La Land</p>
+                            <p class="text-xs text-green-400">84% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🌹</div>
+                            <p class="text-sm font-bold">Titanic</p>
+                            <p class="text-xs text-green-400">89% Match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentaries -->
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4 text-red-500">📚 Documentaries</h2>
+                <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🌍</div>
+                            <p class="text-sm font-bold">Our Planet</p>
+                            <p class="text-xs text-green-400">92% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🦁</div>
+                            <p class="text-sm font-bold">Our Planet II</p>
+                            <p class="text-xs text-green-400">91% Match</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 h-72 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🏃</div>
+                            <p class="text-sm font-bold">Free Solo</p>
+                            <p class="text-xs text-green-400">88% Match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-900 p-8 text-center mt-8">
+            <p class="text-gray-400">🎬 Netflix Clone - All 8 Categories Showing Movies</p>
+            <p class="text-sm text-gray-500 mt-2">Open this file in your browser to see all movie categories</p>
+        </div>
+    </div>
+</body>
+</html>

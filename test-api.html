@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDB API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #000; color: #fff; }
+        .test { margin: 20px 0; padding: 15px; background: #222; border-radius: 5px; }
+        .error { color: #ff6b6b; }
+        .success { color: #51cf66; }
+        pre { background: #333; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>🎬 TMDB API Test</h1>
+    <p>Testing API key: 139b9285</p>
+    
+    <div id="results"></div>
+
+    <script>
+        const API_KEY = '139b9285';
+        const BASE_URL = 'https://api.themoviedb.org/3';
+        const results = document.getElementById('results');
+
+        async function testAPI() {
+            const endpoints = [
+                { name: 'Trending', url: '/trending/all/week' },
+                { name: 'Netflix Originals', url: '/discover/tv?with_networks=213' },
+                { name: 'Top Rated', url: '/movie/top_rated' }
+            ];
+
+            for (const endpoint of endpoints) {
+                const testDiv = document.createElement('div');
+                testDiv.className = 'test';
+                
+                try {
+                    const response = await fetch(`${BASE_URL}${endpoint.url}?api_key=${API_KEY}`);
+                    const data = await response.json();
+                    
+                    if (response.ok) {
+                        testDiv.innerHTML = `
+                            <h3 class="success">✅ ${endpoint.name} - SUCCESS</h3>
+                            <p>Status: ${response.status}</p>
+                            <p>Results: ${data.results?.length || 0} items</p>
+                            <details>
+                                <summary>View Response</summary>
+                                <pre>${JSON.stringify(data, null, 2)}</pre>
+                            </details>
+                        `;
+                    } else {
+                        testDiv.innerHTML = `
+                            <h3 class="error">❌ ${endpoint.name} - FAILED</h3>
+                            <p>Status: ${response.status}</p>
+                            <p>Error: ${data.status_message || 'Unknown error'}</p>
+                            <pre>${JSON.stringify(data, null, 2)}</pre>
+                        `;
+                    }
+                } catch (error) {
+                    testDiv.innerHTML = `
+                        <h3 class="error">❌ ${endpoint.name} - NETWORK ERROR</h3>
+                        <p>Error: ${error.message}</p>
+                    `;
+                }
+                
+                results.appendChild(testDiv);
+            }
+        }
+
+        testAPI();
+    </script>
+</body>
+</html>
