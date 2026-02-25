@@ -50,7 +50,7 @@ node server-fixed.js
 4. Get your connection string
 5. Update your `.env` file:
 ```env
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/netflix-clone
+urs MongoDB String Connection
 ```
 
 #### Option B: Install MongoDB Locally
