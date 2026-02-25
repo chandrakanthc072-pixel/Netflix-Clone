@@ -159,7 +159,7 @@ PORT=5000
 NODE_ENV=development
 
 # Database Configuration
-MONGO_URI=mongodb://localhost:27017/netflix-clone
+MONGO_URI=
 
 # JWT Configuration
 JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
