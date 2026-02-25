@@ -58,7 +58,7 @@ urs MongoDB String Connection
 2. Start MongoDB service
 3. Use local connection string:
 ```env
-MONGO_URI=mongodb://localhost:27017/netflix-clone
+MONGO_URI=----
 ```
 
 #### Option C: Run Without Database (Testing Only)
